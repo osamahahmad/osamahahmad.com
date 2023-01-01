@@ -2,7 +2,7 @@
 
 This is a repository for my first Node.js project: a web server for my personal website.
 
-I [MEAN](https://rapidapi.com/blog/lamp-vs-mean/), I'm pretty used to LAMP stacks, but it's also important to expand my skillset. Node also enables slick real-time technology in my web apps — something sorely amiss in [the stuff I use at work](https://en.wikipedia.org/wiki/Lorenzo_patient_record_systems).
+I [MEAN](https://rapidapi.com/blog/lamp-vs-mean/), I'm pretty used to LAMP, but it's also important to expand my skillset. Node also enables slick real-time technology in my web apps — something sorely amiss in [the stuff I use at work](https://en.wikipedia.org/wiki/Lorenzo_patient_record_systems).
 
 ## Hosting
 I've been using [Google Cloud Free Tier](https://cloud.google.com/free/docs/free-cloud-features) to run a small Ubuntu server. Getting SSL working was a breeze with [Cloudflare's free plan](https://www.cloudflare.com/en-gb/plans/free/) (use flexible mode), and so was DNS management.
