@@ -27,7 +27,7 @@ cd Node.js/server
 ```
 I then generated an ISC license, relevant .gitignore and Contributor Covenenant:
 ```
-npx license isc
+npx license
 npx gitignore node
 npx covgen me@osamahahmad.com
 ```
