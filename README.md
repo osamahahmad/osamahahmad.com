@@ -37,7 +37,7 @@ npm init
 ```
 
 ## Installing Node.js packages
-I used [`npm`] to install [`express`](https://www.npmjs.com/package/express) and [`vhost`](https://www.npmjs.com/package/vhost):
+I used [`npm`](https://www.npmjs.com) to install [`express`](https://www.npmjs.com/package/express) and [`vhost`](https://www.npmjs.com/package/vhost):
 ```
 npm install express
 npm install vhost
