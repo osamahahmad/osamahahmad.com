@@ -1,9 +1,13 @@
-const express = require('express')
-const app = express()
-const port = 80
+var connect = require('connect')
+var serveStatic = require('serve-static')
+var vhost = require('vhost')
 
-app.use(express.static(__dirname + '/osamahahmad.com'))
-  
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`)
-})
+var app = connect()
+
+var osamahahmad_com = connect()
+osamahahmad_com.use(serveStatic(__dirname + '/osamahahmad.com'))
+app.use(vhost('osamahahmad.com', osamahahmad_com))
+
+app.use(serveStatic(__dirname + '/static'))
+
+app.listen(80)
