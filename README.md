@@ -55,4 +55,4 @@ I then installed `pm2` with the global flag (`-g`):
 npm install pm2 -g
 ```
 
-Using `pm2 start` to start my project gives me far more flexibility than the `node` command. The `pm2 startup` command enables the server to — you guessed it — start on startup. Also, there's zero downtime when updating it with the `pm2 reload` command.
+Using `pm2 start` to start my project gives me far more flexibility than the `node` command. The `pm2 startup` command enables the server to — you guessed it — start anything that was running before the last `pm2 save` command on startup. Also, there's zero downtime when updating it with the `pm2 reload` command.
