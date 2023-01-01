@@ -25,7 +25,7 @@ I made a project directory, and changed into it:
 mkdir -p Node.js/server
 cd Node.js/server
 ```
-I then generated an ISC license, relevant .gitignore and Contributor Covenenant:
+I then generated a license file, a relevant .gitignore and a Contributor Covenenant:
 ```
 npx license
 npx gitignore node
