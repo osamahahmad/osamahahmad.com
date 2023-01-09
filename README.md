@@ -2,7 +2,7 @@
 
 This is a repository for my first Node.js project: a web server for my personal website.
 
-I [MEAN](https://rapidapi.com/blog/lamp-vs-mean/), I'm pretty used to LAMP stacks, but it's also important to expand my skillset. Node also enables slick real-time technology in my web apps — something sorely amiss in [the stuff I use at work](https://en.wikipedia.org/wiki/Lorenzo_patient_record_systems).
+I [MEAN](https://rapidapi.com/blog/lamp-vs-mean/), I'm pretty used to LAMP, but it's also important to expand my skillset. Node also enables slick real-time technology in my web apps — something sorely amiss in [the stuff I use at work](https://en.wikipedia.org/wiki/Lorenzo_patient_record_systems).
 
 ## Hosting
 I've been using [Google Cloud Free Tier](https://cloud.google.com/free/docs/free-cloud-features) to run a small Ubuntu server. Getting SSL working was a breeze with [Cloudflare's free plan](https://www.cloudflare.com/en-gb/plans/free/) (use flexible mode), and so was DNS management.
@@ -15,6 +15,8 @@ Installing Node was easy with [Node Version Manager (`nvm`)](https://github.com/
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 source ~/.bashrc
 nvm list remote
+```
+```
 nvm install lts/hydrogen
 ```
 And, yes, I screened that bash script before running it!
@@ -25,9 +27,11 @@ I made a project directory, and changed into it:
 mkdir -p Node.js/server
 cd Node.js/server
 ```
-I then generated an ISC license, relevant .gitignore and Contributor Covenenant:
+I then generated a license file, a relevant .gitignore and a Contributor Covenenant:
 ```
-npx license isc
+npx license
+```
+```
 npx gitignore node
 npx covgen me@osamahahmad.com
 ```
@@ -37,7 +41,7 @@ npm init
 ```
 
 ## Installing Node.js packages
-I used [`npm`] to install [`express`](https://www.npmjs.com/package/express) and [`vhost`](https://www.npmjs.com/package/vhost):
+I also used `npm` to install [`express`](https://www.npmjs.com/package/express) and [`vhost`](https://www.npmjs.com/package/vhost):
 ```
 npm install express
 npm install vhost
@@ -50,9 +54,9 @@ sudo apt-get install libcap2-bin
 sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
 ```
 
-I then installed `pm2` with the global flag (`-g`):
+I then installed [`pm2`](https://www.npmjs.com/package/pm2) with the global flag (`-g`):
 ```
 npm install pm2 -g
 ```
 
-Using `pm2 start` to start my project gives me far more flexibility than the `node` command. For one, the `pm2 startup` command enables the server to — you guessed it — start on startup and, also, there's zero downtime when updating it with the `pm2 reload` command.
+Using `pm2 start` to start my project gives me far more flexibility than the `node` command. The `pm2 startup` command enables the server to — you guessed it — start anything that was running before the last `pm2 save` command on startup. Also, there's zero downtime when updating it with the `pm2 reload` command.
