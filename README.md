@@ -15,6 +15,8 @@ Installing Node was easy with [Node Version Manager (`nvm`)](https://github.com/
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 source ~/.bashrc
 nvm list remote
+```
+```
 nvm install lts/hydrogen
 ```
 And, yes, I screened that bash script before running it!
@@ -28,6 +30,8 @@ cd Node.js/server
 I then generated a license file, a relevant .gitignore and a Contributor Covenenant:
 ```
 npx license
+```
+```
 npx gitignore node
 npx covgen me@osamahahmad.com
 ```
