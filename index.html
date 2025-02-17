@@ -1,130 +1,181 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="description"
-        content="Doctor interested in healthtech — fluent in medicine and coding. Passionate about developing innovative healthcare solutions." />
-    <meta name="keywords"
-        content="diagnosync digitisation AI NHS clinical doctor osamah ahmad dr derby burton east midlands liverpool" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Doctor interested in healthtech — fluent in medicine and coding. Passionate about developing innovative healthcare solutions.">
+    <meta name="author" content="Dr Osamah Ahmad">
+    
+    <title>Dr Osamah Ahmad</title>
+
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="application/ld+json">
-        {
-            "@context" : "https://schema.org",
-            "@type" : "WebSite",
-            "name" : "Dr Osamah Ahmad",
-            "url" : "https://osamahahmad.com",
-            "sameAs": ["https://linkedin.com/in/drosamahahmad", "https://github.com/osamahahmad"]
-        }
-    </script>
+
     <style>
         * {
-            border: 0px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
-            font-size: 16px;
-            margin: 0px;
-            outline: none;
         }
 
         body {
-            background-color: white;
-            color: black;
-            line-height: 1.5;
-            padding: 10%;
+            background: #f9f9f9;
+            color: #222;
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 1.5rem;
+            line-height: 1.6;
+            text-align: left;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
         }
 
         @media (prefers-color-scheme: dark) {
             body {
-                background-color: black;
-                color: white;
+                background: #111;
+                color: #eee;
             }
         }
 
-        .top_gap {
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile img:hover {
+            transform: scale(1.05);
+        }
+
+        .profile h1 {
+            font-size: 1.8rem;
+        }
+
+        @media (max-width: 500px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        section {
+            margin-top: 2rem;
             padding-top: 1rem;
-        }
-
-        .div_footer {
-            bottom: 0;
-            padding: 1em 0 1em 0;
-            position: fixed;
-            width: 100%;
-        }
-
-        .main_point {
-            font-size: 1.25rem;
-            font-weight: bold;
-        }
-
-        .main_point img {
-            height: 1.25rem;
-            width: 1.25rem;
-        }
-
-        @media only screen and (min-width: 640px) {
-            .main_point {
-                font-size: 2rem;
-            }
-
-            .main_point img {
-                height: 2rem;
-                width: 2rem;
-            }
-        }
-
-        .small_point {
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        @media only screen and (min-width: 640px) {
-            .small_point {
-                font-size: 1.5rem;
-            }
-        }
-
-        a,
-        a:link,
-        .js_a {
-            color: darkorange;
-            cursor: pointer;
-            text-decoration: underline;
+            border-top: 1px solid #ccc;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: slideUp 0.6s ease-out forwards 0.2s;
         }
 
         @media (prefers-color-scheme: dark) {
-
-            a,
-            a:link,
-            .js_a {
-                color: lightorange;
-                cursor: pointer;
-                text-decoration: underline;
+            section {
+                border-color: #444;
             }
         }
 
-        a:visited {
-            color: orange;
+        a {
+            color: darkorange;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: orangered;
+        }
+
+        .icon-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+            transition: transform 0.2s ease;
+        }
+
+        .icon-link:hover {
+            transform: translateX(5px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            text-align: center;
+            color: gray;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards 0.4s;
         }
     </style>
-    <title>Dr Osamah Ahmad</title>
 </head>
 
 <body>
-    <div class="main_point">Hi.</div>
-    <div class="main_point top_gap">I'm Dr Osamah Ahmad.</div>
-    <div class="main_point top_gap">Here's my <a class="main_point" href="https://linkedin.com/in/drosamahahmad"
-            target="_blank" rel="noopener">LinkedIn <i class="fa fa-linkedin-square"></i></a>.
-    </div>
-    <div class="main_point top_gap">You can also visit my <a class="main_point" href="https://github.com/osamahahmad"
-            target="_blank" rel="noopener">GitHub <i class="fa fa-github"></i></a>.</div>
-    <div class="main_point top_gap">In 2024, I made <a class="main_point" href="https://radiologyinterviewprep.com"
-            target="_blank" rel="noopener">Radiology Interview Prep.</a></div>
-    <div class="div_footer">&copy; Osamah Ahmad 2025</div>
+    <header>
+        <div class="profile">
+            <img src="android-chrome-192x192.png" alt="Dr Osamah Ahmad">
+            <div>
+                <h1>Dr Osamah Ahmad</h1>
+                <p>Doctor interested in healthtech — fluent in medicine and coding.</p>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h2>Current Projects</h2>
+        <p><a href="https://radiologyinterviewprep.com" target="_blank" rel="noopener noreferrer">Radiology Interview Prep.</a></p>
+    </section>
+
+    <section>
+        <h2>Showcase</h2>
+        <p>
+            <a href="https://linkedin.com/in/drosamahahmad" target="_blank" rel="noopener noreferrer" class="icon-link">
+                <i class="fa fa-linkedin-square"></i> Clinical Journey
+            </a>
+        </p>
+        <p>
+            <a href="https://github.com/osamahahmad" target="_blank" rel="noopener noreferrer" class="icon-link">
+                <i class="fa fa-github"></i> Technical Portfolio
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        &copy; <span id="year"></span> Osamah Ahmad
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
